@@ -1,0 +1,64 @@
+create database first_session; --  create database
+show databases  -- show all available databases
+use first_session;  -- use first_session database
+
+-- create table
+create table student(
+studnet_id int primary key,
+student_name varchar(50) not null,
+student_enroll_no int(15) unique,
+age int,
+course varchar(20)
+)
+
+
+show tables  -- this is the command to see all the available tables
+
+describe student  -- describe the student details
+
+create table branch(
+AIDS varchar(20),
+AIML varchar(20),
+IIOT varchar(20),
+AR varchar(20)
+)
+
+show tables
+
+describe branch
+
+
+-- alter command 
+
+Q apply alter command in the table branch to add new branch CSE
+alter table branch add CSE varchar(20)
+describe branch
+
+Q. WAP to change the storage of CSE from 20 to 100.
+alter table branch modify CSE varchar(100)
+describe branch
+
+Q. WAP to rename the AIDS to AIDSS.
+alter table branch rename column AIDS to AIDSS
+describe branch
+
+Q. WAP to drop AIDS column.
+alter table branch drop column AIDSS
+describe branch
+
+Q. WAP to rename the name of table student to bakhchod_bacche.
+rename table student to bakhchod_bacche
+describe bakhchod_bacche
+
+Q. Remove all the data but remain the structure of the as it is.
+truncate table bakhchod_bacche
+describe bakhchod_bacche
+
+Q. Write a program to drop bakhchode_bacche table.
+drop table bakhchod_bacche
+show tables
+
+Q. WAP to drop the first_session database.
+drop database first_session
+show databases
+
