@@ -1,0 +1,60 @@
+# DML commands 
+
+Q. create a database and form a table with proper table
+
+create database company_data
+show databases
+use company_data
+show tables
+
+create table employ (
+emp_name varchar(20),
+salary int(10),
+age int(5),
+gender varchar(10),
+department varchar(20)
+)
+
+show tables
+describe employ
+-- Inserting data into the tables
+insert into employ(emp_name,salary,age,gender,department)
+values("Deepak Singh",100000,23,"Male","Data Science");
+describe employ
+show tables
+select * from employ
+
+-- inserting multiple values in the table at once
+insert into employ(emp_name,salary,age,gender,department)
+values
+("Vinay",2000000,20,"Male","CSE"),
+("Kinjal Singh",3000000,21,"Female","AI"),
+("Kuwar",2500000,25,"Male","EC")
+select * from employ
+
+Q. Get specific column
+select emp_name,salary from employ
+
+Q Use where to filter rows
+select * from employ where salary >2000000 
+
+Q. Use order by command to fetch data in sorted format
+select * from employ order by salary desc
+
+Q. Write a command to updata the data of the deepak row
+update employ set salary =  2000000 where emp_name='Deepak Singh'
+
+set sql_safe_updates = 0
+
+
+
+Q. Update multiple columns at once
+update employ
+set department = 'Manager', salary=123456789
+where emp_name='Kinjal Singh'
+select * from employ
+
+Q. Delete deepak row
+delete from employ
+where emp_name = 'Deepak Singh'
+select * from employ

@@ -1,3 +1,4 @@
+DDL commands
 create database first_session; --  create database
 show databases  -- show all available databases
 use first_session;  -- use first_session database
